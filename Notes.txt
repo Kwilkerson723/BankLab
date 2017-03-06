@@ -1,0 +1,38 @@
+project 2 we are going to simulate a bank
+
+first class 
+
+Bank 
+----------
+private:
+	name
+	vec<account>
+public:
+	getName()
+
+
+
+Account
+-----------
+Private:
+	Customer
+	Account ID
+	Balance
+Public:
+	deposit()
+	withdraw()
+	getBalance()
+
+Customer
+------------
+private:
+	firstName 
+	lastName
+public:
+	getFullName()
+
+
+vector //a starting point and a direction an arrow a hard beginning with no end   -------------->
+header file is where you define stuff, cPP file is where you 
+pragma once makes sure header files only run once when called more than once
+//if you've already included files dont do it again says pragma once
