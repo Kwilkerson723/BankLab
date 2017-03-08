@@ -14,5 +14,14 @@ public:
 	std::vector<Account> GetAccounts();
 	bool OpenAccount(Account account, int startingPennies);
 	void CreateAccount(Account newAccount);
+	std::string ShowAccounts();
+
+	std::string ListAccounts();
+
+	void Deposit(int accountNumber, int amount);
+	
+	
+
+	
 
 };

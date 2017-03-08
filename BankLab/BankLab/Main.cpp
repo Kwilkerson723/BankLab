@@ -73,5 +73,38 @@ void AddAccountMenu()
 
 void TransactMenu()
 {
+	system("cls");
+	cout << "Which Account?" << endl;
+	cout << bank.ListAccounts() << endl; 
+
+	int chosenAccount;
+	cin >> chosenAccount;
+
+	system("cls");
+	cout << "1) Deposit" << endl; 
+	cout << "2) Withdraw" << endl; 
+
+	int transactionType;
+	cin >> transactionType;
+
+	system("cls");
+	cout << "how many pennies? :";
+	int pennies; 
+	cin >> pennies; 
+
+	switch (transactionType)
+	{
+	case 1: bank.Deposit(chosenAccount, pennies); break; 
+	case 2: bank.Withdraw(chosenAccount, pennies);break; 
+	default: break;
+	}
+	
+}
+
+void DisplayAccountMenu()
+{
+	system("cls");
+	cout << bank.ShowAccounts();
+	system("pause");
 
 }
