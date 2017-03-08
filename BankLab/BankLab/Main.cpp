@@ -22,35 +22,40 @@ int main()
 
 void DisplayMenu()
 {
-	system("cls");
-	cout << "Welcome to " << bank.GetName() << endl; 
-	cout << "1) Add Account " << endl; 
-	cout << "2) Deposit" << endl; 
-	cout << "3) Withdraw" << endl; 
-	cout << "What would you like to do?" << endl; 
-	
 	int choice;
-	cin >> choice;
+	do {
+		system("cls");
+		cout << "Welcome to " << bank.GetName() << endl;
+		cout << "1) Add Account " << endl;
+		cout << "2) Deposit" << endl;
+		cout << "3) Withdraw" << endl;
+		cout << "What would you like to do?" << endl;
 
-	switch (choice)
-	{
-	case 1: AddAccountMenu(); break;
-	case 2: TransactMenu(); break;
-	case 3: 
-	default: break;
-	
-	}
+		//int choice;
+		cin >> choice;
+
+		switch (choice)
+		{
+		case 1: AddAccountMenu(); break;
+		case 2: TransactMenu(); break;
+		case 3:
+		default: break;
+		}
+
+		}while (choice != 10);
 
 }
 
 
 void AddAccountMenu()
 {
+
+	system("cls");
 	cout << "customer first name: ";
 	string firstName;
 	cin >> firstName;
 	
-	cout << "customer las name: ";
+	cout << "customer last name: ";
 	string lastName;
 	cin >> lastName;
 
