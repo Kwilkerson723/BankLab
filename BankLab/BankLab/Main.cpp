@@ -27,8 +27,8 @@ void DisplayMenu()
 		system("cls");
 		cout << "Welcome to " << bank.GetName() << endl;
 		cout << "1) Add Account " << endl;
-		cout << "2) Deposit" << endl;
-		cout << "3) Withdraw" << endl;
+		cout << "2) Transact" << endl;
+		cout << "3) Show Accounts" << endl;
 		cout << "What would you like to do?" << endl;
 
 		//int choice;
@@ -38,7 +38,7 @@ void DisplayMenu()
 		{
 		case 1: AddAccountMenu(); break;
 		case 2: TransactMenu(); break;
-		case 3:
+		case 3:DisplayAccountMenu(); break;
 		default: break;
 		}
 

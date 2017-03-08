@@ -1,4 +1,5 @@
 #include "Bank.h"
+#include "Customer.h"
 
 Bank::Bank(std::string name) : _name(name)
 {
@@ -33,32 +34,52 @@ void Bank::CreateAccount(Account newAccount)
 std::string Bank::ShowAccounts() 
 {
 
-	{
+	
 		void ShowAccounts();
 		std::string output = "accounts for " + _name + "\n";
-		for (auto account : _accounts)
+		for (Account account : _accounts)
 		{
-			output += std::to_string(account.getAccountNumber()) += "\n";
-			return output;
+			//TODO: Display as Account Number - LastName, FirstName - Balance
+			output += std::to_string(account.getAccountNumber()) + " - " + account.getCustomerInfo() + std::string(account.getBalance) += "\n";
+			
 		}
-
-	}
+		return output;
 
 }
 
 std::string Bank::ListAccounts()
 {
-	return std::string();
+	std::string output = "Accounts for" + _name + "\n";
+	int index = 0;
+	for (Account account : _accounts)
+	{
+		output += std::to_string(index) + ") " + std::to_string(account.getAccountNumber()) += "\n";
+		index++;
+	}
+
+	return output;
 }
 
 void Bank::Deposit(int accountNumber, int amount)
 {
-	for(Account account : _accounts) {
+	for(Account &account : _accounts) {
 		if (account.getAccountNumber == accountNumber) {
 			account.Deposit(amount);
 			return;
 		}
 
 	}
+	return;
+}
 
+void Bank::Withdraw(int accountNumber, int amount)
+{
+	for (Account &account : _accounts) {
+		if (account.getAccountNumber == accountNumber) {
+			account.Withdraw(amount);
+			return;
+		}
+
+	}
+	return; 
 }

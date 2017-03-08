@@ -19,7 +19,7 @@ public:
 	std::string ListAccounts();
 
 	void Deposit(int accountNumber, int amount);
-	
+	void Withdraw(int accountNumber, int amount);
 	
 
 	

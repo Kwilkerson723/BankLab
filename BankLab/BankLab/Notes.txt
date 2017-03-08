@@ -52,9 +52,15 @@ shift del deletes line
 
 write in something to check balance of any account
 
+look up passing by refrence
+look up & symbol 
+next class is on pointers
 
+display account number - last name, first name and then balance;
+lab 444- jones, bob: balance
 
-
+add a log of deposits
+add message for all deposits and withdraws showing new balance;
 
 
 
