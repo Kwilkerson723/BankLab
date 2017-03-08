@@ -7,6 +7,7 @@ Bank bank = Bank("Awesome bank");
 void DisplayMenu();
 void AddAccountMenu();
 void TransactMenu();
+void DisplayAccountMenu();
 
 int main()
 {
@@ -38,7 +39,7 @@ void DisplayMenu()
 		{
 		case 1: AddAccountMenu(); break;
 		case 2: TransactMenu(); break;
-		case 3:DisplayAccountMenu(); break;
+		case 3: DisplayAccountMenu(); break;
 		default: break;
 		}
 

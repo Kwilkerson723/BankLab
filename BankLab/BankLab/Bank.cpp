@@ -40,7 +40,7 @@ std::string Bank::ShowAccounts()
 		for (Account account : _accounts)
 		{
 			//TODO: Display as Account Number - LastName, FirstName - Balance
-			output += std::to_string(account.getAccountNumber()) + " - " + account.getCustomerInfo() + std::string(account.getBalance) += "\n";
+			output += std::to_string(account.getAccountNumber()) + " - " + account.getCustomerInfo() + std::to_string(account.getBalance()) += "\n";
 			
 		}
 		return output;
@@ -63,7 +63,7 @@ std::string Bank::ListAccounts()
 void Bank::Deposit(int accountNumber, int amount)
 {
 	for(Account &account : _accounts) {
-		if (account.getAccountNumber == accountNumber) {
+		if (account.getAccountNumber() == accountNumber) {
 			account.Deposit(amount);
 			return;
 		}
@@ -75,7 +75,7 @@ void Bank::Deposit(int accountNumber, int amount)
 void Bank::Withdraw(int accountNumber, int amount)
 {
 	for (Account &account : _accounts) {
-		if (account.getAccountNumber == accountNumber) {
+		if (account.getAccountNumber() == accountNumber) {
 			account.Withdraw(amount);
 			return;
 		}
